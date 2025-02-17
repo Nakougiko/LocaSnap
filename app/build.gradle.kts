@@ -58,6 +58,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    // Material Design 3
+    implementation("com.google.android.material:material:1.9.0")
+
     // CameraX pour la prise de photos
     implementation("androidx.camera:camera-core:1.4.1")
     implementation("androidx.camera:camera-camera2:1.1.0")

@@ -20,6 +20,10 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import androidx.camera.view.PreviewView
 import androidx.exifinterface.media.ExifInterface
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+
 class CameraActivity : ComponentActivity() {
 
     private lateinit var imageCapture: ImageCapture
@@ -28,12 +32,14 @@ class CameraActivity : ComponentActivity() {
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private var currentLocation: Location? = null
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera)
 
         previewView = findViewById(R.id.previewView)
-        val captureButton: ImageView = findViewById(R.id.capture_button)
+        val captureButton: ExtendedFloatingActionButton = findViewById(R.id.capture_button)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
@@ -44,10 +50,23 @@ class CameraActivity : ComponentActivity() {
             ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS)
         }
 
-        captureButton.setOnClickListener { takePhoto() }
+        // Charger l'animation
+        val captureAnimation: Animation = AnimationUtils.loadAnimation(this, R.anim.scale_up)
+
+        // Appliquer l'animation au bouton de capture
+        captureButton.setOnClickListener {
+            captureButton.startAnimation(captureAnimation)
+            takePhoto()
+        }
 
         cameraExecutor = Executors.newSingleThreadExecutor()
+
+        val closeButton: ImageView = findViewById(R.id.close_button)
+        closeButton.setOnClickListener {
+            finish() // Ferme l'activité et retourne à l'écran précédent
+        }
     }
+
 
     @SuppressLint("MissingPermission")
     private fun getLastKnownLocation() {
