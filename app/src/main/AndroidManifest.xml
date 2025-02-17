@@ -35,6 +35,12 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.LocaSnap">
         </activity>
+
+        <activity android:name=".views.MapActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LocaSnap">
+        </activity>
     </application>
 
 </manifest>

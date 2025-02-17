@@ -71,4 +71,7 @@ dependencies {
     // ExifInterface pour modifier les métadonnées des photos
     implementation("androidx.exifinterface:exifinterface:1.3.3")
 
+    // Mapbox SDK pour afficher la carte interactive
+    implementation("com.mapbox.maps:android:11.10.0")
+
 }
