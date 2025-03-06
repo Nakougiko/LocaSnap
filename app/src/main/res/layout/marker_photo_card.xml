@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/marker_background"
+    android:padding="6dp">
+
+    <!-- Image de la photo principale -->
+    <ImageView
+        android:id="@+id/photo_preview"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/photo_border"
+        android:elevation="4dp"/>
+
+    <!-- Image de la deuxième photo empilée derrière -->
+    <ImageView
+        android:id="@+id/photo_stack"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="6dp"
+        android:alpha="0.7"
+        android:visibility="gone"
+        android:background="@drawable/photo_border"/>
+
+    <!-- Nombre de photos en plus -->
+    <TextView
+        android:id="@+id/photo_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:padding="4dp"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/photo_count_background"
+        android:visibility="gone"/>
+</FrameLayout>

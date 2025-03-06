@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/black">
+
+    <!-- Aperçu de la caméra -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:implementationMode="performance"
+        app:scaleType="fitCenter"/>
+
+    <!-- Bouton de capture -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/capture_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@android:color/white"
+        app:elevation="8dp"
+        app:borderWidth="6dp"
+        android:stateListAnimator="@null"/>
+
+</FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Bouton Accueil -->
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_home"
+        app:showAsAction="always"/>
+
+    <!-- Bouton Caméra au centre -->
+    <item
+        android:id="@+id/nav_camera"
+        android:icon="@drawable/ic_add_photo"
+        android:title="@string/nav_camera"
+        app:showAsAction="always"/>
+
+    <!-- Bouton Profil -->
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/nav_profile"
+        app:showAsAction="always"/>
+</menu>

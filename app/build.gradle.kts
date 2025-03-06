@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.camera.view)
+    implementation(libs.play.services.maps)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -73,5 +74,10 @@ dependencies {
 
     // Mapbox SDK pour afficher la carte interactive
     implementation("com.mapbox.maps:android:11.10.0")
+
+    // Glide pour charger les images
+    implementation ("com.github.bumptech.glide:glide:4.13.2")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.13.2")
+    implementation("io.coil-kt:coil:2.4.0")
 
 }

@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">LocaSnap</string>
+    <string name="app_name" translatable="false">LocaSnap</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Accueil</string>
+    <string name="nav_camera">Photos</string>
+    <string name="nav_profile">Profil</string>
 </resources>
